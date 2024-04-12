@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.rightelem {
+transition:  ease-in 0.1s;
+   
+}
+nav{
+    position: fixed;
+}
+#section1{
+    
+    width: 100vw;
+    height: 40vw;
+    /* background-image: url(section1/1.jfif); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease-in-out 1s;
+    
+}
+@keyframes headingborder {
+    0% {
+        border-top: 2px solid aqua;
+        transition: ease-in 2s;
+    }
+    100% {
+        border-bottom: 2px solid aqua;
+        transition: ease-out 2s;
+    }
+}
+@keyframes headbutton{
+    0% {
+        border-top: 2px solid aqua;
+        padding-left: 1vw;
+        font-size: 1.5rem;
+        transition: ease-in 2s;
+    }
+    100% {
+        border-bottom: 2px solid aqua;
+        font-size: 2rem;
+        transition: ease-out 2s;
+        padding-left: 7vw;
+    }
+}
+@keyframes recent{
+    0% {
+        border-bottom: 2px solid aqua;
+        padding-left: 1vw;
+        transition: ease-in 2s;
+    }
+    100% {
+        border-bottom: 2px solid aqua;
+        transition: ease-out 2s;
+        padding-left: 0vw;
+        
+    }
+}
+@keyframes movborder {
+    0% {
+        border-top: 4px solid aqua;
+        transition: all ease 2s;
+        transition-duration: 3s;
+    }
+    30% {
+        border-right: 4px solid aqua;
+        transition: all ease 2s;
+        transition-duration: 3s;
+    }
+    70% {
+        border-bottom: 4px solid aqua;
+        transition: all ease 2s;
+        transition-duration: 3s;
+    }
+    100% {
+        border-left: 4px solid aqua;
+        transition: all ease 2s;
+        transition-duration: 3s;
+    }
+   
+    
+}
+#heading{
+    font-size: 4vw;
+    position: sticky;
+}
+.head h1{
+    animation: headingborder 2s infinite alternate; 
+}
+.head button{
+    margin-top: 5vw;
+    animation: headbutton 3s infinite alternate; 
+    
+}
+.recent h1{
+    animation: recent 2s infinite alternate;
+    padding: 1vw;
+    
+}
+#movie .mov{
+    
+    margin: 2rem;
+    padding: 5px;
+    animation: movborder 2s infinite alternate;
+    /* transition: all ease-in 2s ; */
+   
+}
+
+.handbugrur{
+    position: absolute;
+right: 0;
+top: 33px;
+cursor: pointer;
+display: none;
+
+}
+.handbugrur .line{
+border: 2px solid white;
+width: 25px;
+margin: 5px;
+
+}
+#handbugrurright{
+    display: none;
+}
+@media (max-width:600px) {
+    nav{
+    position: fixed;
+   
+    }
+    .handbugrur{
+        display: block;
+        z-index: 9999;
+        position: fixed;
+    }
+    #navconts{
+        flex-direction: column;
+      
+    }
+    #handbugrurright{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 3rem;  
+        display: none;
+    }
+    #rightflex{ 
+        display: none;
+    }
+    #leftflex{
+        padding-left: 0rem;
+        padding-right: 3rem;
+    }
+    #heading{
+        font-size: 3vw;
+        
+        
+    }
+    .head button{
+        font-size: 2vw;
+        
+        
+    }
+    
+}
+
+
